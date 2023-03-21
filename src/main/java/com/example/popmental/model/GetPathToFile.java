@@ -12,9 +12,9 @@ public class GetPathToFile {
         System.out.println("This is the path to Nicolaus: " + path + " ,perhaps.");     // print result of path method
     }
     public static String getPath() {
-        //FileFilter csv_filter = new FileNameExtensionFilter("CSV_Files", ".csv", ".CSV");   // theoretical filter for CSV files doesn't work
+        FileNameExtensionFilter csv_filter = new FileNameExtensionFilter("CSV_Files", "*.csv", "csv");   // filter for CSV files
         JFileChooser chooser = new JFileChooser();      // create new FileChooser instance named chooser
-        //chooser.addChoosableFileFilter(csv_filter);       // set filter doesn't work
+        chooser.setFileFilter(csv_filter);       // set filter
         int result = chooser.showOpenDialog(null);      // creates new window with choose dialog and returns option chosen
         if (result == JFileChooser.APPROVE_OPTION) {        // compares result if option was approved
             File selectedFile = chooser.getSelectedFile();      // creates File class as selectedFile and sets the file from chooser
