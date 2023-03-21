@@ -9,7 +9,7 @@ public class GetPathToFile {
 
     public static void main(String[] args) {
         String path = getPath();        // testcall for the getPath method
-        System.out.println("This is the path to Nicolaus: " + path + " ,perhaps.");     // print result of path method
+        System.out.println("This is the path to File: " + path + " ,perhaps.");     // print result of path method
     }
     public static String getPath() {
         FileNameExtensionFilter csv_filter = new FileNameExtensionFilter("CSV_Files", "*.csv", "csv");   // filter for CSV files
