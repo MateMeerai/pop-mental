@@ -7,10 +7,12 @@ import java.io.File;
 
 public class GetPathToFile {
 
+    /*
     public static void main(String[] args) {
         String path = getPath();        // testcall for the getPath method
         System.out.println("This is the path to File: " + path + " ,perhaps.");     // print result of path method
     }
+    */
     public static String getPath() {
         FileNameExtensionFilter csv_filter = new FileNameExtensionFilter("CSV_Files", "*.csv", "csv");   // filter for CSV files
         JFileChooser chooser = new JFileChooser();      // create new FileChooser instance named chooser
@@ -20,6 +22,6 @@ public class GetPathToFile {
             File selectedFile = chooser.getSelectedFile();      // creates File class as selectedFile and sets the file from chooser
             return selectedFile.getAbsolutePath();      // returns absolute path to file as String
         }
-        return null;       //if file choose is interrupted the method returns null please intercept
+        return "n.V.";       //if file choose is interrupted the method returns null please intercept
     }
 }
